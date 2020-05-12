@@ -1,6 +1,4 @@
 from image_utils import *
-# Anushka Angamuthu
-
 
 def k_means(image, k):
     """
