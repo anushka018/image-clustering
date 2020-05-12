@@ -1,1 +1,1 @@
-# image-clustering
+# k-means
