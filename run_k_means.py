@@ -1,7 +1,5 @@
 from image_utils import *
 from k_means import *
-# Anushka Angamuthu
-
 
 if __name__ == "__main__":
     file = input("please enter a image filename to run the k-means clustering algorithm on:")
