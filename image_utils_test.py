@@ -6,7 +6,7 @@ if __name__ == "__main__":
     # Test writing it unmodified
     save_ppm("unmodified.ppm", image)
 
-    # rotate the colors, it's a simple manipulation, but it's always a fun one.
+    # rotate the colors
     width, height = get_width_height(image)
     for x in range(width):
         for y in range(height):
