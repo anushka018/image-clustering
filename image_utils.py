@@ -1,15 +1,11 @@
 import random
-# Anushka Angamuthu
 
-# A variable defining "black" as a computer color.
-# This is used in load when making an empty list-of-lists for loading data into.
-# You probably don't need this, but what do I know?
 BLACK = (0, 0, 0)
 
 
 def read_ppm(filename):
     """
-    Reads an image saved in ppm format (specifically, "plain" ppm format P3)
+    Reads an image saved in ppm format 
     :param filename: the name of the ppm file to load
     :return: a list-of-lists representing the image. The list-of-lists will be width x height, and each element will be
              a 3-tuple representing the color of the image as a red / green / blue value.
@@ -61,8 +57,6 @@ def save_ppm(filename, image):
                 being a 3-tuple of red,green,blue values each of which should be between 0 and 255.
     :return: Nothing.
     """
-    # Provided, open the file and write the first few lines, as these are required
-    # Note, the syntax for writing to a file is a little different than print.
     out_file = open(filename, "w")
     print("P3", file=out_file)
 
@@ -70,19 +64,11 @@ def save_ppm(filename, image):
     print(width, height, file=out_file)
     print(255, file=out_file)
 
-
-    # From here, you need to write the image data.
-    # To write one pixel you simply need to output the red, green, and blue components
-    # in order with whitespace separating them. I would also recommend putting a newline after each pixed.
-    # you need to output the image row-by-row, so all of the first row, then all of the second etc.
-
     for a in range(height):
         for b in range(width):
             print(image[b][a][0], image[b][a][1], image[b][a][2], " ", end=' ', file=out_file)
         print('\n', file=out_file)
 
-
-    # Provided - gotta close the file, skipping this is bad ok?
     out_file.close()
 
 
