@@ -1,7 +1,5 @@
 from k_means import *
 from image_utils import *
-#Anushka Angamuthu
-
 
 if __name__ == "__main__":
     file = input("image file> ")
